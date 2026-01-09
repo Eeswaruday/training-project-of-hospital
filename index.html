@@ -8,23 +8,32 @@
     <script src="script.js"></script>
 </head>
 <body>
+    <div align="right">
+        select language / భాషను ఎంచుకోండి: 
+        <button onclick="setLanguage('en')">English</button>
+        <button onclick="setLanguage('te')">తెలుగు</button>
+    </div>
+    <br>
     <header>
-        <h1>Welcome to the Virtual Hospital</h1>
-        <p>Your health, our priority.</p>
+        <h1 id="title">Welcome to the Virtual Hospital</h1>
+        <p id="desc">Your health, our priority.</p>
     </header>
     <main>
         <section align="center">
-            <h2>Welcome to the Virtual Hospital</h2>
-            <p>Your health, our priority.</p>
+            <h2 id="welcome">Welcome to the Virtual Hospital</h2>
+            <p id="welcome_desc">Your health, our priority.</p>
             <div>
                 <a href="symptoms.html">
-                <button>Check Symptoms</button>
+                <button id="start">Check Symptoms</button>
             </a>
             </div>
         </section>
     </main> 
     <footer>
-        <p>&#9888;  All rights reserved to EESWAR UDAY (25KP5A6105)</p>
+        <p id="footer">&#9888;  All rights reserved to EESWAR UDAY (25KP5A6105)</p>
     </footer>
+    <script src="script.js">
+
+    </script>
 </body>
 </html>
