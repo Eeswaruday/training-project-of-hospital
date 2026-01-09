@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Virtual Hospital - Book an Appointment : <span id="doctorName"></span></h1>
+        <p>Schedule your visit with our healthcare professionals.</p>
+    </header>
+    <main>
+        <section>
+            <form onsubmit="return confirmAppointment()">
+                <table align="center" border="1">
+                    <tr>
+                        <th><label for="pname">Name:</label></th>
+                        <td><input type="text" id="pname" name="pname"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="email">Email:</label></th>
+                        <td><input type="email" id="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="date">Preferred Date:</label></th>
+                        <td><input type="date" id="date" name="date"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="time">Preferred Time:</label></th>
+                        <td><input type="time" id="time" name="time"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="age">Age:</label></th>
+                        <td><input type="number" id="age" name="age"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="doctor">Select Doctor:</label></th>
+                        <td>
+                            <select id="doctor" name="doctor">
+                                <option value="dr_Mouli">Dr. Mouli</option>
+                                <option value="dr_Rajendra">Dr. Rajendra</option>
+                                <option value="dr_Anil">Dr. Anil</option>
+                                <option value="dr_Rishi">Dr. Rishi</option>
+                                <option value="dr_Uday">Dr. Uday</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <br>
+                <div align="center">
+                    <button type="submit">Confirm</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("doctorName").innerText = localStorage.getItem("doctor");
+    </script>
+    <footer>
+        <p>&#9888;  Educational purposes only</p>
+    </footer>   
+</body>
+</html>

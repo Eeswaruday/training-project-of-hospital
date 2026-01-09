@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Virtual Hospital - Appointment Confirmed</h1>
+        <p>Thank you for booking an appointment with us.</p>
+    </header>
+    <main>
+        <section>
+            <div align="center" style="font-size: 15pt;" id="summary">
+                <h2>Your appointment has been successfully scheduled!</h2>
+                <p>We look forward to seeing you.</p>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.getElementById("summary").innerHTML =`
+            <b>Name:</b> ${localStorage.getItem("pname")}<br>
+            <b>Email:</b> ${localStorage.getItem("email")}<br>
+            <b>Preferred Date:</b> ${localStorage.getItem("date")}<br>
+            <b>Preferred Time:</b> ${localStorage.getItem("time")}<br>
+            <b>Age:</b> ${localStorage.getItem("age")}<br>
+            <b>Doctor:</b> ${localStorage.getItem("doctor")}<br>
+        `
+        localStorage.clear();
+    </script>
+    <footer>
+        <p>&#9888;  Educational purposes only</p>
+    </footer>
+</body>
+</html>
