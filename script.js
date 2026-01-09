@@ -61,3 +61,31 @@ function confirmAppointment(){
     window.location.href = "confirmation.html";
     return false;
 }
+//language selection data
+const languageData = {
+    en: {
+        title:"Welcome to the Virtual Hospital",
+        desc:"Your health, our priority",
+        start:"Check Symptoms",
+        welcome:"Welcome to the Virtual Hospital",
+        welcome_desc:"Your health, our priority.",
+        footer:"© All rights reserved to EESWAR UDAY (25KP5A6105)."
+    },
+    te: {
+        title:"వర్చువల్ ఆసుపత్రికి స్వాగతం",
+        desc:"మీ ఆరోగ్యం, మా ప్రధాన ప్రాధాన్యత",
+        start:"లక్షణాలను తనకు చూడండి",
+        welcome:"వర్చువల్ ఆసుపత్రికి స్వాగతం",
+        welcome_desc:"మీ ఆరోగ్యం, మా ప్రధాన ప్రాధాన్యత.",
+        footer:"© అన్ని హక్కులు ఈశ్వర్ ఉదయ్ (25KP5A6105) కి ప్రత్యేకించబడ్డాయి."
+    }
+}
+function setLanguage(lang) {
+    document.getElementById("title").innerHTML = languageData[lang].title;
+    document.getElementById("desc").innerHTML = languageData[lang].desc;
+    document.getElementById("start").innerHTML = languageData[lang].start;
+    document.getElementById("welcome").innerHTML = languageData[lang].welcome;
+    document.getElementById("welcome_desc").innerHTML = languageData[lang].welcome_desc;
+    document.getElementById("footer").innerHTML = languageData[lang].footer;
+
+}
